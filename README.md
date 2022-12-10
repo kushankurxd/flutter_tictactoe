@@ -1,7 +1,8 @@
 ## TIC TAC TOE
 
 ```
-Using getx for state management and custom written sizing class for screen specific sizes, with sound null safety,
+Using getx for state management and custom written sizing class for screen specific sizes, 
+with sound null safety,
 modularized code and better folder struct keeping best practices in mind
 ```
 
