@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:warm_up/constants/constant.dart';
+import 'package:warm_up/utils/config.dart';
 
 import '../widgets/app_footer.dart';
 import '../widgets/appbar.dart';
@@ -11,6 +12,7 @@ class CustomLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -21,9 +23,9 @@ class CustomLayout extends StatelessWidget {
             children: [
               const AppBarWidget(),
               child,
-              const Padding(
-                padding: EdgeInsets.only(top: 20.0),
-                child: AppFooterWidget(),
+              Padding(
+                padding: EdgeInsets.only(top: SizeConfig.safeBlockVertical * 3),
+                child: const AppFooterWidget(),
               ),
             ],
           ),

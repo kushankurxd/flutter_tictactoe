@@ -6,6 +6,7 @@ import 'package:warm_up/widgets/cubes.dart';
 import '../constants/constant.dart';
 import '../controllers/tic_tac_toe.dart';
 import '../layout/layout.dart';
+import '../utils/config.dart';
 import '../widgets/scoreboard.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -21,14 +22,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return GetBuilder<TicTacToeController>(builder: (_) {
       return CustomLayout(
         child: Padding(
-          padding: const EdgeInsets.only(top: 8),
+          padding: EdgeInsets.only(top: SizeConfig.safeBlockVertical * 2),
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(bottom: 40.0),
+                padding:
+                    EdgeInsets.only(bottom: SizeConfig.safeBlockVertical * 7),
                 child: ScoreboardWidget(
                   xScore: ticTacToeController.xScore,
                   yScore: ticTacToeController.yScore,
@@ -52,12 +55,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               Padding(
-                  padding: const EdgeInsets.only(top: 40),
+                  padding:
+                      EdgeInsets.only(top: SizeConfig.safeBlockVertical * 10),
                   child: ButtonWidget(
                       onPressed: () => {ticTacToeController.onNewGameClick()},
                       text: Constants.newGameText)),
               Padding(
-                  padding: const EdgeInsets.only(top: 12),
+                  padding:
+                      EdgeInsets.only(top: SizeConfig.safeBlockVertical * 1.4),
                   child: ButtonWidget(
                       onPressed: () => {ticTacToeController.onResetClick()},
                       text: Constants.resetGameText))

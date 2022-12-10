@@ -4,6 +4,7 @@ import 'package:warm_up/constants/constant.dart';
 import 'package:warm_up/utils/util.dart';
 
 import '../controllers/tic_tac_toe.dart';
+import '../utils/config.dart';
 
 class CubesWidget extends StatelessWidget {
   final String displayElement;
@@ -19,12 +20,13 @@ class CubesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return GetBuilder<TicTacToeController>(builder: (_) {
       return IgnorePointer(
         ignoring: ticTacToeController.stopInteraction.value,
         child: Container(
-          width: 100,
-          height: 100,
+          width: SizeConfig.safeBlockHorizontal * 26,
+          height: SizeConfig.safeBlockVertical * 12,
           decoration: BoxDecoration(
               color: Constants.backgroundColor,
               border: Util.getBorderSide(i, j)),

@@ -1,15 +1,17 @@
 import 'package:flutter/cupertino.dart';
 
 import '../constants/constant.dart';
+import '../utils/config.dart';
 
 class AppBarWidget extends StatelessWidget {
   const AppBarWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Center(
       child: Container(
-        padding: const EdgeInsets.only(top: 56),
+        padding: EdgeInsets.only(top: SizeConfig.safeBlockVertical * 6),
         child: Column(
           children: [
             const Text(Constants.appTitle,

@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:warm_up/constants/constant.dart';
 
+import '../utils/config.dart';
+
 class ScoreboardWidget extends StatelessWidget {
   final RxInt xScore;
   final RxInt yScore;
@@ -10,6 +12,7 @@ class ScoreboardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -22,9 +25,10 @@ class ScoreboardWidget extends StatelessWidget {
               fontFamily: Constants.fontFamily,
               fontWeight: FontWeight.w500),
         ),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          child: Text(
+        Padding(
+          padding: EdgeInsets.symmetric(
+              horizontal: SizeConfig.safeBlockHorizontal * 4),
+          child: const Text(
             Constants.semiColon,
             style: TextStyle(
                 color: Constants.yellowColor,
