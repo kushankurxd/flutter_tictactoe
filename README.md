@@ -1,16 +1,12 @@
-# warm_up
+## TIC TAC TOE
 
-A new Flutter project.
+```
+Using getx for state management and custom written sizing class for screen specific sizes, with sound null safety,
+modularized code and better folder struct keeping best practices in mind
+```
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<div style="display:flex">
+<img src="https://user-images.githubusercontent.com/37204706/206874116-fe46b884-5e46-4f74-8539-65bd5bc22596.png" style="width:300px;height:600px" />
+<img src="https://user-images.githubusercontent.com/37204706/206874119-2d8de181-9521-4386-9e06-9ac6b7222223.png" style="width:300px;height:600px" />
+<img src="https://user-images.githubusercontent.com/37204706/206874120-f986d4cf-00ad-4a9a-8e28-e6312968597d.png" style="width:300px;height:600px" />
+</div>
